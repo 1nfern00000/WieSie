@@ -1,0 +1,34 @@
+{
+  "name": "WieSie",
+  "description": "Visualiseer jou produkidee met sagte leiding en 3D-beelde.",
+  "instructions_path": "prompt.md",
+  "tools": [
+    {
+      "name": "generateImage",
+      "description": "Genereer 'n 3D-beeld gebaseer op produkbeskrywing.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "prompt": { "type": "string" }
+        },
+        "required": ["prompt"]
+      }
+    },
+    {
+      "name": "generatePDF",
+      "description": "Skep 'n minimalistiese PDF van die produkvoorstel.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "industry": { "type": "string" },
+          "goal": { "type": "string" },
+          "problem": { "type": "string" },
+          "cost": { "type": "string" },
+          "price_and_timeline": { "type": "string" },
+          "image_url": { "type": "string" }
+        },
+        "required": ["industry", "goal", "problem", "cost", "price_and_timeline", "image_url"]
+      }
+    }
+  ]
+}
